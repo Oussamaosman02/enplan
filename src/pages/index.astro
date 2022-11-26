@@ -1,0 +1,146 @@
+---
+import Layout from '../layouts/Layout.astro';
+---
+
+<Layout title='En Plan'>
+  <main>
+    <img src='/dark/android-chrome-512x512.png' alt='logo' />
+    <div>
+      <h1>En plan es ...</h1>
+      <ul>
+        <li><span style='--step:8;'>libertad</span></li>
+        <li><span style='--step:9;'>innovación</span></li>
+        <li><span style='--step:14;'>profesionalidad</span></li>
+        <li><span style='--step:14;'>más que una web</span></li>
+      </ul>
+    </div>
+  </main>
+</Layout>
+
+<style>
+  main {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    min-height: 100vh;
+    width: 100%;
+    align-items: center;
+  }
+  img {
+    width: 10vw;
+    margin: 2vh 2vw;
+    position: absolute;
+    top: 10px;
+    left: 45%;
+    transition: all .5s ease-in-out;
+  }
+  img:hover {
+    filter: drop-shadow(0 0 1.5px var(--p));
+  }
+  div {
+    width: fit-content;
+    height: fit-content;
+    display: inline-flex;
+  }
+  h1 {
+    font-size: 60px;
+    letter-spacing: -5px;
+    font-weight: 400;
+  }
+  ul {
+    margin-left: 15px;
+    line-height: 90px;
+    height: 90px;
+    overflow: hidden;
+    position: relative;
+    top: -10px;
+  }
+  ul li {
+    list-style: none;
+    font-size: 60px;
+    letter-spacing: -5px;
+    font-weight: 400;
+    letter-spacing: -5px;
+    position: relative;
+    top: 0px;
+    animation: cha 8s steps(4) infinite;
+  }
+  @keyframes cha {
+    100% {
+      top: -360px;
+    }
+  }
+  ul li span {
+    position: relative;
+    padding-right: 7px;
+    color: var(--p);
+  }
+  ul li span::after {
+    content: '';
+    left: 0;
+    position: absolute;
+    width: 100%;
+    height: 120%;
+    background-color: #000;
+    border-left: 2px solid #f5f5f5;
+    animation: esc 2s steps(16) infinite;
+  }
+  @keyframes esc {
+    100% {
+      left: 100%;
+      margin: 0 -35px 0 35px;
+    }
+  }
+
+  @media screen and (max-width: 720px) {
+    img {
+      width: 30vw;
+      margin: 2vh 2vw;
+      position: absolute;
+      top: 10%;
+      left: 30%;
+    }
+    h1 {
+      font-size: 1.5rem;
+      letter-spacing: -1.5px;
+    }
+    ul {
+      margin-left: 4px;
+      top: -30px;
+    }
+    ul li {
+      font-size: 1.5rem;
+      letter-spacing: -1.5px;
+    }
+    ul li span {
+      position: relative;
+      padding-right: 5px;
+    }
+    ul li span::after {
+      top: 0;
+      height: 100%;
+    }
+  }
+  @media screen and (max-width: 300px) {
+    h1 {
+      font-size: 1.2rem;
+      letter-spacing: -1.2px;
+    }
+    ul {
+      margin-left: 4px;
+      top: -35px;
+    }
+    ul li {
+      font-size: 1.2rem;
+      letter-spacing: -1.2px;
+    }
+    ul li span {
+      position: relative;
+      padding-right: 5px;
+    }
+    ul li span::after {
+      top: 0;
+      height: 100%;
+    }
+  }
+</style>
