@@ -1,17 +1,17 @@
 ---
-import Layout from '../layouts/Layout.astro';
+import Layout from "../layouts/Layout.astro";
 ---
 
-<Layout title='En Plan'>
+<Layout title="En Plan">
   <main>
-    <img src='/dark/android-chrome-512x512.png' alt='logo' />
+    <img src="/dark/android-chrome-512x512.png" alt="logo" />
     <div>
       <h1>En plan es ...</h1>
       <ul>
-        <li><span style='--step:8;'>libertad</span></li>
-        <li><span style='--step:9;'>innovación</span></li>
-        <li><span style='--step:14;'>profesionalidad</span></li>
-        <li><span style='--step:14;'>más que una web</span></li>
+        <li><span style="--step:8;">libertad</span></li>
+        <li><span style="--step:9;">innovación</span></li>
+        <li><span style="--step:14;">profesionalidad</span></li>
+        <li><span style="--step:14;">más que una web</span></li>
       </ul>
     </div>
   </main>
@@ -32,7 +32,7 @@ import Layout from '../layouts/Layout.astro';
     position: absolute;
     top: 10px;
     left: 45%;
-    transition: all .5s ease-in-out;
+    transition: all 0.5s ease-in-out;
   }
   img:hover {
     filter: drop-shadow(0 0 1.5px var(--p));
@@ -76,7 +76,7 @@ import Layout from '../layouts/Layout.astro';
     color: var(--p);
   }
   ul li span::after {
-    content: '';
+    content: "";
     left: 0;
     position: absolute;
     width: 100%;
